@@ -16,6 +16,11 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #34353b;
 }
+nav {
+  position: fixed;
+  top: 0;
+  background-color: #34353a;
+}
 
 header {
   height: 100vh;
