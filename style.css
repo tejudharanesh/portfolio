@@ -124,12 +124,12 @@ nav.sticky .menu-btn {
 }
 @media screen and (max-width: 768px) {
   .home {
-    height: 70vh;
-    background-size: contain;
-    background-position: right;
+    height: 100vh;
+    background-size: 500px;
+    background-position: bottom;
   }
   .home .home-content {
-    height: 65%;
+    height: 60%;
   }
 }
 .home .text-one {
@@ -244,13 +244,13 @@ section .button {
 section .button button {
   outline: none;
   padding: 8px 16px;
-  border-radius: 4px;
+  border-radius: 6px;
   font-size: 25px;
   font-weight: 400;
   background: #4070f4;
-  color: #fff;
-  border: 2px solid transparent;
+  color: #ffffff;
   cursor: pointer;
+  border: 2px solid transparent;
   transition: all 0.4s ease;
 }
 section .button button:hover {
