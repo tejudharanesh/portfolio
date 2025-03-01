@@ -49,7 +49,7 @@
             <div class="text">
                 <div class="text-one">Hello,</div>
                 <div class="text-two">I'm Teju D</div>
-                <div class="text-three">Full Stack developer</div>
+                <div class="text-three"></div>
                 <div class="text-four">From Bengaluru</div>
             </div>
             <div class="button"><a href="mailto:tejudharanesh1234@gmail.com">
@@ -332,8 +332,23 @@
     </section>
 
     <script>
+         const text = "Full Stack Developer";
+         const textContainer = document.querySelector(".text-three");
+         let index = 0;
         let nav = document.querySelector("nav");
         let scrollBtn = document.querySelector(".scroll-button a");
+
+
+
+        function typeEffect() {
+    if (index < text.length) {
+      textContainer.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeEffect, 100);
+    }
+  }
+
+  typeEffect();
         // Show/hide sticky navigation and scroll button based on scroll position
         window.onscroll = function () {
             if (document.documentElement.scrollTop > 20) {
