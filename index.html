@@ -338,20 +338,20 @@
         let nav = document.querySelector("nav");
         let scrollBtn = document.querySelector(".scroll-button a");
         let isDeleting = false;
+        let minLength = 1;
 
 
 
-
- function typeEffect() {
+function typeEffect() {
     if (!isDeleting && index < text.length) {
       textContainer.innerHTML = text.substring(0, index + 1);
       index++;
       setTimeout(typeEffect, 100); // Typing speed
     } 
-    else if (isDeleting && index > 0) {
+    else if (isDeleting && index > minLength) {
       textContainer.innerHTML = text.substring(0, index - 1);
       index--;
-      setTimeout(typeEffect, 50); // Deleting speed
+      setTimeout(typeEffect, 50); // Erasing speed
     } 
     else {
       isDeleting = !isDeleting;
