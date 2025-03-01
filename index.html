@@ -332,19 +332,30 @@
     </section>
 
     <script>
-         const text = "Full Stack Developer";
-         const textContainer = document.querySelector(".text-three");
-         let index = 0;
+        const text = "Full Stack Developer";
+        const textContainer = document.querySelector(".text-three");
+        let index = 0;
         let nav = document.querySelector("nav");
         let scrollBtn = document.querySelector(".scroll-button a");
+        let isDeleting = false;
 
 
 
-        function typeEffect() {
-    if (index < text.length) {
-      textContainer.innerHTML += text.charAt(index);
+
+ function typeEffect() {
+    if (!isDeleting && index < text.length) {
+      textContainer.innerHTML = text.substring(0, index + 1);
       index++;
-      setTimeout(typeEffect, 100);
+      setTimeout(typeEffect, 100); // Typing speed
+    } 
+    else if (isDeleting && index > 0) {
+      textContainer.innerHTML = text.substring(0, index - 1);
+      index--;
+      setTimeout(typeEffect, 50); // Deleting speed
+    } 
+    else {
+      isDeleting = !isDeleting;
+      setTimeout(typeEffect, 1000); // Pause before switching
     }
   }
 
