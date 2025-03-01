@@ -304,44 +304,103 @@ section .button button:hover {
   justify-content: space-between;
 }
 .services .boxes .box {
-  margin-bottom: 20px;
+  perspective: 1000px; /* Enables 3D flip effect */
+  margin-bottom: 30px;
   width: calc(100% / 3 - 20px);
   text-align: center;
   border-radius: 12px;
-  padding: 30px 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
   cursor: default;
   transition: all 0.4s ease;
+  position: relative; /* Needed for absolute positioning of children */
+  height: 300px; /* Set a fixed height for consistency */
 }
-.services .boxes .box:hover {
-  background: #4070f4;
-  color: #fff;
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
 }
-.services .boxes .box .icon {
-  height: 50px;
-  width: 50px;
-  background: #4070f4;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 50px;
-  font-size: 18px;
-  color: #fff;
-  margin: 0 auto 10px auto;
-  transition: all 0.4s ease;
+
+.box:hover .card {
+  transform: rotateY(180deg);
 }
-.boxes .box:hover .icon {
-  background-color: #fff;
-  color: #4070f4;
+
+/* FRONT SIDE */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
-.services .boxes .box:hover .topic,
-.services .boxes .box:hover p {
-  color: #0e2431;
-  transition: all 0.4s ease;
+
+.card-front {
+  background: #fff;
+  z-index: 2;
+  padding: 10px;
 }
-.services .boxes .box:hover .topic,
-.services .boxes .box:hover p {
-  color: #fff;
+
+/* BACK SIDE */
+.card-back {
+  background: #000;
+  transform: rotateY(180deg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
+
+.card-back::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.card-back a {
+  z-index: 2;
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  border: 2px solid white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+  position: relative; /* Keeps buttons above overlay */
+}
+
+.live-btn {
+  background: #4caf50;
+}
+
+.live-btn:hover {
+  background: white;
+  color: #4caf50;
+}
+
+.code-btn {
+  background: #f44336;
+}
+
+.code-btn:hover {
+  background: white;
+  color: #f44336;
+}
+
 /* Contact Me CSS */
 .contact {
   background: #f0f8ff;
