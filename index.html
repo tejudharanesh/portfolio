@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Website - www.codingnepalweb.com -->
 <html lang="en" dir="ltr">
 
 <head>
@@ -30,13 +29,13 @@
                     <i class="fas fa-times"></i>
                 </div>
             </ul>
-           <div class="media-icons">
-    <a href="https://github.com/tejudharanesh"><i class="fab fa-github"></i></a>
-    <a href="https://www.linkedin.com/in/tejud/"><i class="fab fa-linkedin-in"></i></a>
-    <a href="https://x.com/tejud2001"><i class="fab fa-twitter"></i></a>
-    <a href="https://www.instagram.com/_tejud/"><i class="fab fa-instagram"></i></a>
+            <div class="media-icons">
+                <a href="https://github.com/tejudharanesh"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/tejud/"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://x.com/tejud2001"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/_tejud/"><i class="fab fa-instagram"></i></a>
 
-</div>
+            </div>
 
         </div>
         <div class="menu-btn">
@@ -189,7 +188,6 @@
                         <!-- Back Side -->
                         <div class="card-back" style="background-image: url('./assets/project1.PNG');">
                             <a href="https://habi.one" target="_blank" class="btn live-btn">Live Demo</a>
-                            <a href="https://github.com/your-repo-here" target="_blank" class="btn code-btn">Code</a>
                         </div>
                     </div>
                 </div>
@@ -210,8 +208,8 @@
                         <!-- Back Side -->
                         <div class="card-back"
                             style="background-image: url('https://source.unsplash.com/400x300/?construction');">
-                            <a href="https://aavas.example.com" target="_blank" class="btn live-btn">Live Demo</a>
-                            <a href="https://github.com/your-repo-aavas" target="_blank" class="btn code-btn">Code</a>
+                            <a href="" target="_blank" class="btn live-btn">Live Demo</a>
+                            <a href="" target="_blank" class="btn code-btn">Code</a>
                         </div>
                     </div>
                 </div>
@@ -227,9 +225,13 @@
                         <!-- Back Side -->
                         <div class="card-back"
                             style="background-image: url('https://source.unsplash.com/400x300/?finance');">
-                            <a href="https://expensetracker.example.com" target="_blank" class="btn live-btn">Live
+                            <a href="https://expense-tracker.188857.xyz/" target="_blank" class="btn live-btn">Live
                                 Demo</a>
-                            <a href="https://github.com/your-repo-expense" target="_blank" class="btn code-btn">Code</a>
+                            <a href="https://github.com/tejudharanesh/ExpenseTracker_Frontend" target="_blank"
+                                class="btn code-btn">Code_Client</a>
+                            <a href="https://github.com/tejudharanesh/ExpenseTracker_Backend" target="_blank"
+                                class="btn code-btn">Code_Server</a>
+
                         </div>
                     </div>
                 </div>
@@ -250,9 +252,12 @@
                         <!-- Back Side -->
                         <div class="card-back"
                             style="background-image: url('https://source.unsplash.com/400x300/?finance');">
-                            <a href="https://expensetracker.example.com" target="_blank" class="btn live-btn">Live
+                            <a href="https://twitterclone.188857.xyz/" target="_blank" class="btn live-btn">Live
                                 Demo</a>
-                            <a href="https://github.com/your-repo-expense" target="_blank" class="btn code-btn">Code</a>
+                            <a href="https://github.com/tejudharanesh/twitter_frontend" target="_blank"
+                                class="btn code-btn">Code_Client</a>
+                            <a href="https://github.com/tejudharanesh/Twitter" target="_blank"
+                                class="btn code-btn">Code_Server</a>
                         </div>
                     </div>
                 </div>
@@ -272,9 +277,11 @@
                         <!-- Back Side -->
                         <div class="card-back"
                             style="background-image: url('https://source.unsplash.com/400x300/?finance');">
-                            <a href="https://expensetracker.example.com" target="_blank" class="btn live-btn">Live
+                            <a href="https://tejud-housemanagement.netlify.app/" target="_blank"
+                                class="btn live-btn">Live
                                 Demo</a>
-                            <a href="https://github.com/your-repo-expense" target="_blank" class="btn code-btn">Code</a>
+                            <a href="https://github.com/tejudharanesh/house-management" target="_blank"
+                                class="btn code-btn">Code</a>
                         </div>
                     </div>
                 </div>
@@ -292,9 +299,10 @@
                         <!-- Back Side -->
                         <div class="card-back"
                             style="background-image: url('https://source.unsplash.com/400x300/?finance');">
-                            <a href="https://expensetracker.example.com" target="_blank" class="btn live-btn">Live
+                            <a href="https://tejud-feedbackapp.netlify.app/" target="_blank" class="btn live-btn">Live
                                 Demo</a>
-                            <a href="https://github.com/your-repo-expense" target="_blank" class="btn code-btn">Code</a>
+                            <a href="https://github.com/tejudharanesh/feedback" target="_blank"
+                                class="btn code-btn">Code</a>
                         </div>
                     </div>
                 </div>
@@ -342,24 +350,24 @@
 
 
 
-function typeEffect() {
-    if (!isDeleting && index < text.length) {
-      textContainer.innerHTML = text.substring(0, index + 1);
-      index++;
-      setTimeout(typeEffect, 100); // Typing speed
-    } 
-    else if (isDeleting && index > minLength) {
-      textContainer.innerHTML = text.substring(0, index - 1);
-      index--;
-      setTimeout(typeEffect, 50); // Erasing speed
-    } 
-    else {
-      isDeleting = !isDeleting;
-      setTimeout(typeEffect, 1000); // Pause before switching
-    }
-  }
+        function typeEffect() {
+            if (!isDeleting && index < text.length) {
+                textContainer.innerHTML = text.substring(0, index + 1);
+                index++;
+                setTimeout(typeEffect, 100); // Typing speed
+            }
+            else if (isDeleting && index > minLength) {
+                textContainer.innerHTML = text.substring(0, index - 1);
+                index--;
+                setTimeout(typeEffect, 50); // Erasing speed
+            }
+            else {
+                isDeleting = !isDeleting;
+                setTimeout(typeEffect, 1000); // Pause before switching
+            }
+        }
 
-  typeEffect();
+        typeEffect();
         // Show/hide sticky navigation and scroll button based on scroll position
         window.onscroll = function () {
             if (document.documentElement.scrollTop > 20) {

@@ -313,7 +313,7 @@ section .button button:hover {
   cursor: default;
   transition: all 0.4s ease;
   position: relative; /* Needed for absolute positioning of children */
-  height: 300px; /* Set a fixed height for consistency */
+  height: 400px; /* Set a fixed height for consistency */
 }
 
 .card {
