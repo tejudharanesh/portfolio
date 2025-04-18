@@ -351,7 +351,7 @@ section .button button:hover {
 
 /* BACK SIDE */
 .card-back {
-  background: #000;
+  background: #cedbff;
   transform: rotateY(180deg);
   background-size: contain;
   background-position: center;
