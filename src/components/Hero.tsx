@@ -22,7 +22,7 @@ export const Hero = () => {
       </div>
 
       {/* Background Image on Right */}
-      <div className="absolute right-0 top-0 w-1/2 h-full hidden lg:block">
+      <div className="absolute  right-0 top-0 w-1/2 h-full hidden lg:block">
         <div className="relative w-full h-full">
           <img
             src="/assets/profile.png"
@@ -93,7 +93,7 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-
+ 
       {/* Scroll Indicator */}
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 animate-bounce ">
         <ArrowDown className="text-white/60 w-6 h-6" />
